@@ -137,7 +137,12 @@ const Home: NextPage = () => {
       </form>
       <div>
         {APIResponse?.map((book) => (
-          <li>{book.bookTitle}</li>
+          <div className="flex flex-row items-center justify-center mb-4">
+            <li key={book.bookTitle}>{book.bookTitle}</li>
+            <button className="inline-flex items-center justify-center px-6 py-1 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+              delete {book.bookTitle}
+            </button>
+          </div>
         ))}
       </div>
     </div>

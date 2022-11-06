@@ -51,3 +51,17 @@ async function addBook(req, res) {
     res.status(500).json({ error: "Error creating question", success: false });
   }
 }
+
+// async function delBook(req, res) {
+//   const body = req.body;
+//   try {
+//     const deleteEntry = await prisma.bookSuggestion.delete({
+//       where:
+//     })
+
+//     return res.status(200).json(newEntry, { success: true });
+//   } catch (error) {
+//     console.error("Request error", error);
+//     res.status(500).json({ error: "Error deleting question", success: false });
+//   }
+// }
